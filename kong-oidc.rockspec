@@ -1,8 +1,8 @@
 package = "kong-oidc"
-version = "1.3.0-3"
+version = "1.3.0-4"
 source = {
-    url = "git://github.com/revomatico/kong-oidc",
-    tag = "master",
+    url = "git://github.com/jaydanielsen/kong-oidc",
+    tag = "main",
     dir = "kong-oidc"
 }
 description = {

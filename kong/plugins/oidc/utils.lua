@@ -17,7 +17,7 @@ local function formatAsBearerToken(token)
   return "Bearer " .. token
 end
 
-function M.get_redirect_uri(ngx)
+function M.get_redirect_uri_path(ngx)
   local function drop_query()
     local uri = ngx.var.request_uri
     local x = uri:find("?")
@@ -55,7 +55,7 @@ function M.get_options(config, ngx)
     timeout = config.timeout,
     bearer_only = config.bearer_only,
     realm = config.realm,
-    redirect_uri = config.redirect_uri or M.get_redirect_uri(ngx),
+    redirect_uri_path = config.redirect_uri_path or M.get_redirect_uri_path(ngx),
     scope = config.scope,
     validate_scope = config.validate_scope,
     response_type = config.response_type,
