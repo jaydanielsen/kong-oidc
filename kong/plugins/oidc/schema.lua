@@ -74,7 +74,7 @@ return {
             }
           },
           {
-            redirect_uri = {
+            redirect_uri_path = {
               type = "string"
             }
           },
